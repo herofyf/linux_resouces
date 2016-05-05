@@ -1,20 +1,20 @@
-ÒÀ´ÎÖ´ĞĞÒÔÏÂÃüÁî
+ä¾æ¬¡æ‰§è¡Œä»¥ä¸‹å‘½ä»¤
 
 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo 
 
-ÏÂÔØrepoÎÄ¼ş
+ä¸‹è½½repoæ–‡ä»¶
 sed -i 's/aliyun/aliyuncs/g' /etc/yum.repos.d/CentOS-Base.repo 
 
-ĞŞ¸ÄÔ´Îª°¢ÀïÔÆÄÚÍø
+ä¿®æ”¹æºä¸ºé˜¿é‡Œäº‘å†…ç½‘
 sed -i 's/\$releasever/5/' /etc/yum.repos.d/CentOS-Base.repo 
 
-ĞŞ¸Ä°æ±¾Îª5
+ä¿®æ”¹ç‰ˆæœ¬ä¸º5
 yum clean metadata 
 
-Çå¿Õ»º´æ
+æ¸…ç©ºç¼“å­˜
 yum makecache
 
-ÖØ½¨»º´æ
+é‡å»ºç¼“å­˜
 
 
- 
+ http://itgeeker.net/centos-7-epel-china-mirror-repository/
