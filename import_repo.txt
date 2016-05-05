@@ -17,4 +17,7 @@ yum makecache
 重建缓存
 
 
- http://itgeeker.net/centos-7-epel-china-mirror-repository/
+其它教程： http://itgeeker.net/centos-7-epel-china-mirror-repository/
+
+
+163 repo: get http://mirrors.163.com/.help/CentOS6-Base-163.repo
