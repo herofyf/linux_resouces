@@ -1,0 +1,6 @@
+If core dumps aren't turned on in your shell, turn them on. 
+For tcsh it's a command like limit coredumpsize 200000 For bash it is ulimit -c unlimited. See the man page. 
+Start the server startx from the same shell.
+When the server crashes and you get a core file, 
+run gdb on it. The core file might be in /etc/X11 if it's not in the current directory.
+gdb -c core /usr/X11R6/bin/XFree86
