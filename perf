@@ -1,0 +1,11 @@
+在 Linux 下 top 工具可以显示 cpu 的平均利用率(user,nice,system,idle,iowait,irq,softirq,etc.)，可以显示每个 cpu 的利用率。但是无法显示每个线程的 cpu 利用率情况，这时就可能出现这种情况，总的 cpu 利用率中 user 或 system 很高，但是用进程的 cpu 占用率进行排序时，没有进程的 user 或 system 与之对应。
+
+可以用下面的命令将 cpu 占用率高的线程找出来:
+
+$ ps H -eo user,pid,ppid,tid,time,%cpu,cmd –sort=%cpu
+
+这个命令首先指定参数’H'，显示线程相关的信息，格式输出中包含:user,pid,ppid,tid,time,%cpu,cmd，然后再用%cpu字段进行排序。这样就可以找到占用处理器的线程了。
+
+
+
+linux perf tool
